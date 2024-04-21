@@ -1,8 +1,25 @@
-<?php include 'head.html'; ?>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("includes/head.html")
+        .then(response => response.text())
+        .then(data => {
+          // Inserisce il contenuto di header.html nell'elemento <head>
+          document.head.innerHTML += data;
+        });
+    });
+  </script>
 <body>
 
-  <?php include 'header.html'; ?>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("includes/header.html")
+        .then(response => response.text())
+        .then(data => {
+          // Inserisce il contenuto di header.html nell'elemento <head>
+          document.head.innerHTML += data;
+        });
+    });
+  </script>
 
   <!-- ======= Hero Section ======= -->
   <div id="hero" class="home">
