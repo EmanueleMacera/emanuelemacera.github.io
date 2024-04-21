@@ -253,4 +253,44 @@
     }
   });
 
-})()
+  /**
+   * Contact Form with reCAPTCHA
+   */
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.php-email-form');
+    const captcha = document.querySelector('.g-recaptcha');
+    const errorCaptcha = document.querySelector('.error-captcha');
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      // Verifica se il reCAPTCHA è stato selezionato
+      if (!captcha || grecaptcha.getResponse().length === 0) {
+        errorCaptcha.style.display = 'block';
+        return;
+      } else {
+        errorCaptcha.style.display = 'none';
+      }
+
+      const formData = new FormData(this);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      const responseData = await response.json();
+
+      if (response.ok) {
+        form.querySelector('.sent-message').style.display = 'block';
+        form.reset();
+      } else {
+        form.querySelector('.error-message').style.display = 'block';
+        form.querySelector('.error-message').textContent = 'Si è verificato un errore. Riprova più tardi.';
+      }
+    });
+  });
+
+})();
