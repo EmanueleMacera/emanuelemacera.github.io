@@ -1,25 +1,54 @@
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch("includes/head.html")
-        .then(response => response.text())
-        .then(data => {
-          // Inserisce il contenuto di header.html nell'elemento <head>
-          document.head.innerHTML += data;
-        });
-    });
-  </script>
+<!DOCTYPE html>
+<html lang="it">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Emanuele Macera - Sviluppatore</title>
+        <meta name="description" content="Portfolio personale di Emanuele Macera, sviluppatore web abile in PHP, Laravel e JavaScript. Visualizza i miei progetti e le mie competenze.">
+        <meta name="keywords" content="portfolio, sviluppatore web, PHP, Laravel, JavaScript, progetti, competenze">
+
+        <link rel="icon" href="assets/img/favicon.png">
+        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+
 <body>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch("includes/header.html")
-        .then(response => response.text())
-        .then(data => {
-          // Inserisce il contenuto di header.html nell'elemento <head>
-          document.head.innerHTML += data;
-        });
-    });
-  </script>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <!-- Uncomment below if you prefer to use an text logo -->
+      <!-- <h1 class="logo"><a href="index.html">Folio</a></h1> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link active  scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link  scrollto" href="#journal">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <div id="hero" class="home">
