@@ -1534,36 +1534,35 @@ blockquote {
   }
 }
 
-/* Cookie */
+/* Banner dei cookie */
 .cookie-banner {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f8f9fa;
-  padding: 10px 20px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
   text-align: center;
-  display: none;
+  z-index: 999;
 }
 
 .cookie-banner p {
   margin: 0;
   font-size: 14px;
-  line-height: 1.5;
 }
 
-.cookie-banner button {
-  margin-left: 10px;
-  padding: 5px 15px;
-  font-size: 14px;
-  background-color: #007bff;
+.cookie-banner .btn {
+  background: #b8a07e;
   color: #fff;
-  border: none;
-  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: background 0.3s ease;
 }
 
-.cookie-banner button:hover {
-  background-color: #0056b3;
+.cookie-banner .btn:hover {
+  background: #cab89f;
 }
