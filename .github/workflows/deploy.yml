@@ -16,7 +16,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          deploy_key: ${{ secrets.ACCESS_TOKEN }}
+          deploy_key: ${{ secrets.SSH_DEPLOY_KEY }}
           publish_branch: gh-pages
           publish_dir: .
           cname: www.emanuelemacera.com
