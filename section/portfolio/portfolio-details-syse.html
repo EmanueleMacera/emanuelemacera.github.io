@@ -145,8 +145,11 @@
     const cookieBanner = document.getElementById("cookie-banner");
     const acceptCookiesBtn = document.getElementById("accept-cookies");
 
-    if (!localStorage.getItem("cookiesAccepted")) {
-      cookieBanner.style.display = "block";
+    // Controlla se i cookie sono già stati accettati in precedenza
+    const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+    if (!cookiesAccepted) {
+      cookieBanner.style.display = "block"; // Mostra il banner in basso fisso
     }
 
     acceptCookiesBtn.addEventListener("click", function() {
