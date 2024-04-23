@@ -294,18 +294,23 @@
   });
 
   // Codice per il banner dei cookie
-  const cookieBanner = document.getElementById("cookie-banner");
-  const acceptCookiesBtn = document.getElementById("accept-cookies");
+  const showCookieBanner = () => {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptCookiesBtn = document.getElementById("accept-cookies");
 
-  // Mostra il banner solo se non abbiamo ancora accettato i cookie
-  if (!localStorage.getItem("cookiesAccepted")) {
-    cookieBanner.style.display = "block";
-  }
+    // Mostra il banner solo se non abbiamo ancora accettato i cookie
+    if (!localStorage.getItem("cookiesAccepted")) {
+      cookieBanner.style.display = "block";
+    }
 
-  // Quando l'utente clicca su Accetta
-  acceptCookiesBtn.addEventListener("click", function() {
-    localStorage.setItem("cookiesAccepted", true);
-    cookieBanner.style.display = "none";
-  });
+    // Quando l'utente clicca su Accetta
+    acceptCookiesBtn.addEventListener("click", function() {
+      localStorage.setItem("cookiesAccepted", true);
+      cookieBanner.style.display = "none";
+    });
+  };
+
+  // Chiamata alla funzione per mostrare il banner dei cookie
+  showCookieBanner();
 
 })();
