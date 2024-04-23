@@ -129,5 +129,24 @@
   <!-- Template Main JS File -->
   <script src="../../assets/js/main.js"></script>
 
+  <!-- Cookie -->
+  <script>
+    const showCookieBanner = () => {
+      const cookieBanner = document.getElementById("cookie-banner");
+      const acceptCookiesBtn = document.getElementById("accept-cookies");
+
+      if (!localStorage.getItem("cookiesAccepted")) {
+        cookieBanner.style.display = "block";
+      }
+
+      acceptCookiesBtn.addEventListener("click", function() {
+        localStorage.setItem("cookiesAccepted", true);
+        cookieBanner.style.display = "none";
+      });
+    };
+
+    showCookieBanner();
+  </script>
+
   </body>
 </html>
