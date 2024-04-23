@@ -1554,6 +1554,7 @@ blockquote {
   font-size: 14px;
 }
 
+
 .cookie-banner .btn {
   background: #b8a07e;
   color: #fff;
@@ -1563,6 +1564,9 @@ blockquote {
   text-transform: uppercase;
   display: inline-block;
   transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cookie-banner .btn:hover {
