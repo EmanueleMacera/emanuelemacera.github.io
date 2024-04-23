@@ -20,7 +20,3 @@ jobs:
           publish_branch: gh-pages
           publish_dir: .
           cname: www.emanuelemacera.com
-          custom_domain: www.emanuelemacera.com
-          ssl_cert: ${{ secrets.SSL_CERT }}
-          ssl_key: ${{ secrets.SSL_KEY }}
-          ca_bundle: ${{ secrets.CA_BUNDLE }}
