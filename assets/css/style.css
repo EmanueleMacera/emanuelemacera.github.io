@@ -1548,12 +1548,10 @@ blockquote {
   display: block;
 }
 
-
 .cookie-banner p {
   margin: 0;
   font-size: 14px;
 }
-
 
 .cookie-banner .btn {
   background: #b8a07e;
@@ -1564,9 +1562,7 @@ blockquote {
   text-transform: uppercase;
   display: inline-block;
   transition: background 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .cookie-banner .btn:hover {
