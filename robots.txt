@@ -1,6 +1,2 @@
-```
 User-agent: *
 Disallow:
-```
-
-Questo `robots.txt` consente a tutti i bot di indicizzare tutte le pagine del tuo sito.
