@@ -361,24 +361,28 @@
 
   <!-- Cookie -->
   <script>
-    const showCookieBanner = () => {
-      const cookieBanner = document.getElementById("cookie-banner");
-      const acceptCookiesBtn = document.getElementById("accept-cookies");
-
-      // Controlla se i cookie sono già stati accettati in precedenza
-      const cookiesAccepted = localStorage.getItem("cookiesAccepted");
-
-      if (!cookiesAccepted) {
-        cookieBanner.style.display = "block"; // Mostra il banner in basso fisso
-      }
-
-      acceptCookiesBtn.addEventListener("click", function() {
-        localStorage.setItem("cookiesAccepted", true);
-        cookieBanner.style.display = "none";
-      });
-    };
-
-    showCookieBanner();
+    document.addEventListener('DOMContentLoaded', function() {
+      const showCookieBanner = () => {
+        const cookieBanner = document.getElementById("cookie-banner");
+        const acceptCookiesBtn = document.getElementById("accept-cookies");
+  
+        // Controlla se i cookie sono già stati accettati in precedenza
+        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+  
+        if (!cookiesAccepted) {
+          cookieBanner.style.display = "block"; // Mostra il banner in basso fisso
+        }
+  
+        if (acceptCookiesBtn) {
+          acceptCookiesBtn.addEventListener("click", function() {
+            localStorage.setItem("cookiesAccepted", true);
+            cookieBanner.style.display = "none";
+          });
+        }
+      };
+  
+      showCookieBanner();
+    });
   </script>
 
 </body>
